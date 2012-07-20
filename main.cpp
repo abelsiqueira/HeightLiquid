@@ -42,7 +42,7 @@ void Update (float **water, int **height, int w, int h) {
           if (neighWaterValue + neighHeightValue >= waterValue + heightValue)
             continue;
           if (neighWaterValue + neighHeightValue < waterValue + heightValue - 0.1) {
-            float value = (waterValue + heightValue - 0.1 - neighWaterValue - neighHeightValue)/4;
+            float value = (waterValue + heightValue - 0.1 - neighWaterValue - neighHeightValue)/3;
             water[j+p][i+k] += value;
             water[j][i] -= value;
           }
